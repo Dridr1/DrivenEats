@@ -6,6 +6,9 @@
 ::-webkit-scrollbar{
     display: none;
 }
+a{
+    text-decoration: none;
+}
 /* Barra superior */
 .topo{
     position: fixed;
@@ -125,6 +128,17 @@ h4{
     background: #CBCBCB;
     border-radius: 50px;
     border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    padding: 0 72px;
+    color: white;
+}
+.revisar-ativo{
+    background-color: #32B72F;
 }
 /* Confirmar pedido */
 .confirmar-pedido-inativo{
@@ -143,6 +157,67 @@ h4{
     background: #50D074;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px 25px 0 25px;
+    color: white;
+}
+.titulo-confirmar{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+}
+.comida-confirmar, .bebida-confirmar, .sobremesa-confirmar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+}
+.total{
+    width: 100%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    display: flex;
+    justify-content: space-between;
+}
+.botoes-confirmar{
+    width: 100%;
+}
+.realizar-pedido{
+    width: 100%;
+    height: 52px;
+    border-radius: 26px;
+    border: none;
+}
+.link-zap{
+    color: #50D074;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+}
+.cancelar-pedido{
+    width: 100%;
+    height: 52px;
+    border-radius: 26px;
+    border: none;
+    background: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: white;
 }
 .confirmar-pedido-ativo{
     width: 100%;
@@ -160,4 +235,12 @@ h4{
     background: #50D074;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
+}
+
+@media (min-width: 835px) {
+    .conteudo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

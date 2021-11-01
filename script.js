@@ -13,6 +13,8 @@ let bebidaNome;
 let bebidaPreco;
 let sobremesaNome;
 let sobremesaPreco;
+let nome;
+let endereco;
 
 function selecionarComida(prato){
     if(prato.classList.contains('opcao-selecionada')){
@@ -68,9 +70,11 @@ function selecionarSobremesa(sobremesa){
 function verificarSelecao(){
     if(isPratoSelecionado === true && isBebidaSelecionada === true && isSobremesaSelecionada === true){
         botaoDeRevisarPedido.disabled = false;
+        botaoDeRevisarPedido.classList.add('revisar-ativo');
     }
     else{
         botaoDeRevisarPedido.disabled = true;
+        botaoDeRevisarPedido.classList.remove('revisar-ativo');
     }
     if(botaoDeRevisarPedido.disabled === false){
         botaoDeRevisarPedido.innerHTML = 'Fechar pedido';
@@ -80,8 +84,34 @@ function verificarSelecao(){
     }
 }
 function revisarPedido(){
+    nome = prompt('Como podemos te chamar?');
+    endereco = prompt('onde iremos entregar?');
     caixaDeRevisao.classList.replace('confirmar-pedido-inativo', 'confirmar-pedido-ativo');
+    calcularTotal();
+    preencherRevisao();
+    const mensagem = mensagemZap();
+    caixaDeRevisao.querySelector('.link-zap').href = 'https://wa.me/5599981583140?text='+encodeURIComponent(mensagem);
+    
 }
 function fecharRevisao(){
     caixaDeRevisao.classList.replace('confirmar-pedido-ativo', 'confirmar-pedido-inativo');
+}
+function preencherRevisao(){
+    caixaDeRevisao.querySelector('.prato-nome').innerHTML = pratoNome;
+    caixaDeRevisao.querySelector('.prato-preco').innerHTML = pratoPreco;
+    caixaDeRevisao.querySelector('.bebida-nome').innerHTML = bebidaNome;
+    caixaDeRevisao.querySelector('.bebida-preco').innerHTML = bebidaPreco;
+    caixaDeRevisao.querySelector('.sobremesa-nome').innerHTML = sobremesaNome;
+    caixaDeRevisao.querySelector('.sobremesa-preco').innerHTML = sobremesaPreco;
+    caixaDeRevisao.querySelector('.total-preco').innerHTML = 'R$ '+valorTotal;
+}
+function calcularTotal(){
+    let a = parseFloat(pratoPreco.replace(',','.'));
+    let b = parseFloat(bebidaPreco.replace(',', '.'));
+    let c = parseFloat(sobremesaPreco.replace(',','.'));
+    valorTotal = String(((a+b+c).toFixed(2)).replace('.', ','));
+}
+function mensagemZap(){
+    mensagem = 'Olá, gostaria de fazer o pedido:\n- Prato: '+ pratoNome +'\n- Bebida: '+bebidaNome+'\n- Sobremesa: '+sobremesaNome+'\nTotal: R$ '+valorTotal+'\n\nNome: '+ nome +'\nEndereço: '+ endereco;
+    return mensagem
 }

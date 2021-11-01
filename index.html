@@ -13,8 +13,30 @@
     <title>Document</title>
 </head>
 <body>
-    <div onclick="fecharRevisao()" class="confirmar-pedido-inativo">
-            <div class="caixa-de-confirmacao"></div>
+    <div class="confirmar-pedido-inativo">
+            <div class="caixa-de-confirmacao">
+                <span class="titulo-confirmar">Confirme seu pedido</span>
+                <div class="comida-confirmar">
+                    <span class="prato-nome"></span>
+                    <span class="prato-preco"></span>
+                </div>
+                <div class="bebida-confirmar">
+                    <span class="bebida-nome"></span>
+                    <span class="bebida-preco"></span>
+                </div>
+                <div class="sobremesa-confirmar">
+                    <span class="sobremesa-nome"></span>
+                    <span class="sobremesa-preco"></span>
+                </div>
+                <div class="total">
+                    <span>Total</span>
+                    <span class="total-preco"></span>
+                </div>
+                <div class="botoes-confirmar">
+                    <button class="realizar-pedido"><a target="_blank" href="" class="link-zap">Tudo certo, pode pedir!</a></button>
+                    <button onclick="fecharRevisao()" class="cancelar-pedido">Cancelar</button>
+                </div>
+            </div>
     </div>
     <div class="website">
         
