@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="imagem/png" href="assets/favicon.png">
+    <title>DrivenEats</title>
+    <title>Document</title>
+</head>
+<body>
+    <div onclick="fecharRevisao()" class="confirmar-pedido-inativo">
+            <div class="caixa-de-confirmacao"></div>
+    </div>
+    <div class="website">
+        
+        <header class="topo">
+            <h1>DrivenEats</h1>
+            <h2>Sua comida em 6 minutos</h2>
+        </header>
+        <div class="conteudo">
+            <h3>Primeiro, seu prato</h4>
+            <nav class="pratos">
+                <ul class="opcoes">
+                    <li onclick="selecionarComida(this)" class="opcao">
+                        <img src="assets/lasagna.jpg" />
+                        <h4 class="nome">Lasagna</h4>
+                        <span class="descricao">Lasagna al ragu. <br>Orgulho do Garfield </span>
+                        <span class="roubo">R$ <span class="preco">32,90</span></span>                        
+                        <ion-icon name="checkmark-circle"></ion-icon>                   
+                    </li>
+                    <li onclick="selecionarComida(this)" class="opcao">
+                        <img src="assets/pizza.jpg" />
+                        <h4 class="nome">Pizza</h4>
+                        <span class="descricao">Um pouco de massa, queijo e mamma mia! </span>
+                        <span class="roubo">R$ <span class="preco">39,90</span></span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </li>
+                    <li onclick="selecionarComida(this)" class="opcao">
+                        <img src="assets/sanduiche.png" />
+                        <h4 class="nome">Sandubão</h4>
+                        <span class="descricao">Pão e umas coisas aí, delícia demais! </span>
+                        <span class="roubo">R$ <span class="preco">40,00</span></span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </li>
+                    <li onclick="selecionarComida(this)" class="opcao">
+                        <img src="assets/torta.jpg" />
+                        <h4 class="nome">Torta</h4>
+                        <span class="descricao">Até sua vó vai querer a receita!</span>
+                        <span class="roubo">R$ <span class="preco">9,00</span></span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </li>
+                </ul>
+            </nav>
+            <h3>Agora, sua bebida</h4>
+            <nav class="bebidas">
+                <ul class="opcoes">
+                    <li onclick="selecionarBebida(this)" class="opcao">
+                        <img src="assets/coquinha-gelada.jpg" />
+                        <h4 class="nome">Coquinha gelada</h4>
+                        <span class="descricao">Lata 350 ml</span>
+                        <span class="roubo">R$ <span class="preco">5,00</span></span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </li>
+                    <li onclick="selecionarBebida(this)" class="opcao">
+                        <img src="assets/jesus.jpg" />
+                        <h4 class="nome">Guaraná Jesus</h4>
+                        <span class="descricao">Lata 350 ml</span>
+                        <span class="roubo">R$ <span class="preco">5,00</span></span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </li>
+                    <li onclick="selecionarBebida(this)" class="opcao">
+                        <img src="assets/suco.jpg" />
+                        <h4 class="nome">Suquinho</h4>
+                        <span class="descricao">500 ml <br>Várias opções</span>
+                        <span class="roubo">R$ <span class="preco">8,00</span></span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </li>
+                    <li onclick="selecionarBebida(this)" class="opcao">
+                        <img src="assets/pitu.jpeg" />
+                        <h4 class="nome">Pitu</h4>
+                        <span class="descricao">Lata 350 ml <br>Pra matar a sede e você!</span>
+                        <span class="roubo">R$ <span class="preco">3,00</span></span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </li>
+                </ul>
+            </nav>
+            <h3>Por fim, sua sobremesa</h4>
+            <nav class="sobremesas">
+                <ul class="opcoes">
+                    <li onclick="selecionarSobremesa(this)" class="opcao">
+                        <img src="assets/doce.jpg" />
+                        <h4 class="nome">Doce de banana</h4>
+                        <span class="descricao">Um delicioso doce de banana</span>
+                        <span class="roubo">R$ <span class="preco">7,90</span></span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </li>
+                    <li onclick="selecionarSobremesa(this)" class="opcao">
+                        <img src="assets/mousse.jpg" />
+                        <h4 class="nome">Mousse de Maracujá</h4>
+                        <span class="descricao">Um delicioso mousse de maracujá caseiro!</span>
+                        <span class="roubo">R$ <span class="preco">5,90</span></span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </li>
+                    <li onclick="selecionarSobremesa(this)" class="opcao">
+                        <img src="assets/saladadefrutas.jpg" />
+                        <h4 class="nome">Salada de Frutas</h4>
+                        <span class="descricao">Uma deliciosa salada de frutas</span>
+                        <span class="roubo">R$ <span class="preco">3,90</span></span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </li>
+                    <li onclick="selecionarSobremesa(this)" class="opcao">
+                        <img src="assets/sorvete.jpg" />
+                        <h4 class="nome">Sorvetinho</h4>
+                        <span class="descricao">Não nos responsabilizamos pela entrega*</span>
+                        <span class="roubo">R$ <span class="preco">2,50</span></span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="barra-inferior">
+            <button onclick="revisarPedido()" class="revisar">Selecione os 3 itens para fechar o pedido</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

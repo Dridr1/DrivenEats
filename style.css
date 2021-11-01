@@ -1,0 +1,163 @@
+.website{
+    padding-top: 123px;
+    padding-bottom: 108px;
+    background-color: #E5E5E5;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+/* Barra superior */
+.topo{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #CF2B2B;
+    width: 100%;
+    height: 92px;
+    padding-left: 21px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+.topo h1{
+    font-family: Righteous;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 44px;
+}
+.topo h2{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+}
+h3{
+    font-family: Righteous;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    margin-left: 19px;
+}
+
+/* Opções de pratos */
+.opcoes{
+    display: flex;
+    overflow-x: scroll;
+    padding-right: 19px;
+    padding-left: 19px;
+    gap: 16px;
+    margin:  17px 0 27px 0;
+}
+.opcao{
+    width: 172px;
+    height: 216px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 18px 14px;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    position: relative;
+}
+.opcao ion-icon{
+    display: none;
+    position: absolute;
+    color: #32B72F;
+    font-size: 16px;
+    bottom: 15.78px;
+    right: 12.78px;
+}
+.opcao img{
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+h4{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+}
+.descricao{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    color: #A6A6A6;
+}
+.roubo{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+.opcao-selecionada{
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+}
+.opcao-selecionada ion-icon{
+    display: flex;
+}
+
+/* Barra inferior */
+.barra-inferior{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    height: 92px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.revisar{
+    width: 364px;
+    height: 61px;
+    background: #CBCBCB;
+    border-radius: 50px;
+    border: none;
+}
+/* Confirmar pedido */
+.confirmar-pedido-inativo{
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.caixa-de-confirmacao{
+    width: 377px;
+    height: 353px;
+    background: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
+.confirmar-pedido-ativo{
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caixa-de-confirmacao{
+    width: 377px;
+    height: 353px;
+    background: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
